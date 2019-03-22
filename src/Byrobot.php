@@ -11,26 +11,25 @@ namespace Yiranzai\Byrobot;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Yiranzai\Byrobot\Traits\Base;
-use \Yiranzai\Byrobot\Traits\Byrobot as ByrobotTrait;
+use Yiranzai\Byrobot\Traits\Byrobot as ByrobotTrait;
 use Yiranzai\Tools\Date;
 use Yiranzai\Tools\Tools;
 
 /**
  * Class Byrobot
- * @package App\Libs
+ * @package Yiranzai\Byrobot
  */
 final class Byrobot
 {
     use ByrobotTrait, Base;
     /**
-     * @var Client
-     */
-    private $client;
-
-    /**
      * @var array
      */
     private static $guarded = ['url', 'client', 'guarded'];
+    /**
+     * @var Client
+     */
+    private $client;
 
     /**
      * Byrobot constructor.
@@ -366,7 +365,7 @@ final class Byrobot
      */
     public function getTasks($param = [], $isArr = false)
     {
-        if (isset($param['pageSize']) && $param['pageSize'] >= self::$maxTaskPageSize) {
+        if (isset($param['pageSize']) && $param['pageSize'] > self::$maxTaskPageSize) {
             throw  new \RuntimeException('pageSize 不能大于' . self::$maxTaskPageSize);
         }
         return $this->send(__FUNCTION__, $param, $isArr);
@@ -395,7 +394,7 @@ final class Byrobot
      */
     public function queryDoneTaskPhones($param = [], $isArr = false)
     {
-        if (isset($param['pageSize']) && $param['pageSize'] >= self::$maxPhoneLogPageSize) {
+        if (isset($param['pageSize']) && $param['pageSize'] > self::$maxPhoneLogPageSize) {
             throw  new \RuntimeException('pageSize 不能大于' . self::$maxPhoneLogPageSize);
         }
         return $this->send(__FUNCTION__, $param, $isArr);
