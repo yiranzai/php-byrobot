@@ -34,6 +34,11 @@ trait Base
     private static $apiVersion = 'v1';
 
     /**
+     * @var \Yiranzai\Byrobot\Byrobot
+     */
+    private static $robot;
+
+    /**
      * @var array
      */
     public static $url = [
@@ -172,5 +177,19 @@ trait Base
     {
         self::$baseUrl = $url;
         return $this;
+    }
+
+    /**
+     * 获取百应机器人实例
+     *
+     * @param array $config
+     * @return \Yiranzai\Byrobot\Byrobot
+     */
+    public static function init(array $config = []): \Yiranzai\Byrobot\Byrobot
+    {
+        if (null === static::$robot) {
+            static::$robot = new static($config);
+        }
+        return static::$robot;
     }
 }

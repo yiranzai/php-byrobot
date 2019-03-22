@@ -23,10 +23,6 @@ trait Byrobot
      * @var int
      */
     public static $maxPhoneLogPageSize = 50;
-    /**
-     * @var \Yiranzai\Byrobot\Byrobot
-     */
-    public static $robot;
 
     /**
      * @var array
@@ -77,18 +73,4 @@ trait Byrobot
         5 => 'E(拨打失败)',
         6 => 'F(无效客户)',
     ];
-
-    /**
-     * 获取百应机器人实例
-     *
-     * @param array $config
-     * @return \Yiranzai\Byrobot\Byrobot
-     */
-    public static function init(array $config = []): \Yiranzai\Byrobot\Byrobot
-    {
-        if (null === static::$robot) {
-            static::$robot = new static($config);
-        }
-        return static::$robot;
-    }
 }
