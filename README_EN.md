@@ -9,16 +9,16 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-百应智能外呼系统 API
+php byrobot openapi
 
-## 目录
+## Structure
 
 ```
 src/
 tests/
 ```
 
-## 安装
+## Install
 
 Via Composer
 
@@ -26,9 +26,9 @@ Via Composer
 $ composer require yiranzai/byrobot
 ```
 
-## 使用
+## Usage
 
-### 初始化
+### Init
 
 ```php
 $robot = Yiranzai\Byrobot\Byrobot::init(
@@ -47,31 +47,31 @@ $robot->key(YOU_APP_KEY)->secret(YOU_APP_SECRET);
 
 ### API
 
--   `$robot->getCompanys()` // 获取绑定公司列表接口
--   `$robot->getPhones()` // 获取公司的主叫电话列表接口
--   `$robot->getRobots()` // 获取公司的机器人话术列表接口
--   `$robot->addBlackList()` // 添加单个黑名单到公司默认黑名单组接口
--   `$robot->statistics()` // 获取公司 AI 坐席概况接口
--   `$robot->createTask()` // 创建任务接口
--   `$robot->start()` // 启动任务接口
--   `$robot->pause()` // 暂停任务接口
--   `$robot->stop()` // 停止任务接口
--   `$robot->delete()` // 删除任务
--   `$robot->importTaskCustomer()` // 向任务中导入客户接口
--   `$robot->update()` // 修改任务
--   `$robot->call()` // 单次电话外呼
--   `$robot->singleCallByMobile()` // 根据手机号进行单次电话外呼
--   `$robot->getTasks()` // 获取任务列表接口
--   `$robot->getTaskDetail()` // 获取任务详情接口
--   `$robot->queryDoneTaskPhones()` // 获取已经完成任务电话号码接口
--   `$robot->notDialedCustomerList()` // 获取任务未开始的电话列表
--   `$robot->phoneLogInfo()` // 获取一个通话的详情接口
+-   `$robot->getCompanys()` // Get the binding company list interface
+-   `$robot->getPhones()` // Get the company's calling list interface
+-   `$robot->getRobots()` // Get the company's robotic speech list interface
+-   `$robot->addBlackList()` // Add a single blacklist to the company default blacklist group interface
+-   `$robot->statistics()` // Get the company AI agent profile interface
+-   `$robot->createTask()` // Create a task interface
+-   `$robot->start()` // Start the task interface
+-   `$robot->pause()` // Pause task interface
+-   `$robot->stop()` // Stop the task interface
+-   `$robot->delete()` // delete the task
+-   `$robot->importTaskCustomer()` // Import the client interface into the task
+-   `$robot->update()` // modify the task
+-   `$robot->call()` // Single call outside call
+-   `$robot->singleCallByMobile()` // Make a single call based on the phone number
+-   `$robot->getTasks()` // Get the task list interface
+-   `$robot->getTaskDetail()` // Get the task details interface
+-   `$robot->queryDoneTaskPhones()` // Get the completed phone number interface
+-   `$robot->notDialedCustomerList()` // Get a list of calls that the task has not started
+-   `$robot->phoneLogInfo()` // Get a call details interface
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## 测试
+## Testing
 
 ```bash
 $ composer test
@@ -81,7 +81,7 @@ $ composer test
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
 
-## 安全
+## Security
 
 If you discover any security related issues, please email wuqingdzx@gmail.com instead of using the issue tracker.
 
