@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "~7.1",
-        "yiranzai/tools": "^0.1.0",
+        "yiranzai/tools": "~0.1",
         "ext-json": "*"
     },
     "require-dev": {
