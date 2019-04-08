@@ -1,6 +1,6 @@
 # php-byrobot
 
-[ENGLISH](README_EN.md) | [中文](README.md)
+[ENGLISH](README_EN.md) | [中文](../README.md)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
