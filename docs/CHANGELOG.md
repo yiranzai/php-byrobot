@@ -4,6 +4,13 @@ All notable changes to `byrobot` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.2.1 - 2019-04-08
+
+简单修复composer依赖
+
+### Fixed
+
+fix `yiranzai/tools` from `^0.1.0` to `~0.1`
 
 ## v0.2 - 2019-03-22
 
